@@ -27,9 +27,11 @@ def generate_report(book_path, word_tot, char_tots):
     # Sort character dictionary by frequency (only
         # possible in Python 3.7 or later):
     sorted_char_tots = sorted(char_tots, key=char_tots.get, reverse=True)
+    # ^ This step is done differently in the hint
 
     # Loop through and print the key:value pairs:
     for key in sorted_char_tots:
+        # Only print the letters and their frequencies:
         if key.isalpha():
             print(f"{key} appears {char_tots[key]} times")
     
